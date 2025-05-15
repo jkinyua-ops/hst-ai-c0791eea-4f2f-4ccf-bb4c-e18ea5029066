@@ -1,0 +1,39 @@
+@inherits LayoutComponentBase
+@inject ThemeService ThemeService
+@implements IDisposable
+
+<div class="page @(ThemeService.IsDarkTheme ? "dark-theme" : "")">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <button class="btn btn-primary" @onclick="ToggleTheme">
+                @(ThemeService.IsDarkTheme ? "Light Theme" : "Dark Theme")
+            </button>
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        ThemeService.OnThemeChange += StateHasChanged;
+    }
+
+    private void ToggleTheme()
+    {
+        ThemeService.IsDarkTheme = !ThemeService.IsDarkTheme;
+    }
+
+    public void Dispose()
+    {
+        ThemeService.OnThemeChange -= StateHasChanged;
+    }
+}
