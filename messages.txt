@@ -1,2 +1,4 @@
 "change the app name displayed to Tickets Test App"
 
+"add a dark theme toggler"
+
