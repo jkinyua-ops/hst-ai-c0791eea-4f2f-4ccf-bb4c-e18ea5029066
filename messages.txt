@@ -6,3 +6,5 @@
 
 "The app is a blazor server app. fix the bugs that may be considering it as a blazor web assembly app"
 
+"/source/src/Shared/MainLayout.razor(2,9): error CS0246: The type or namespace name 'ThemeService' could not be found (are you missing a using directive or an assembly reference?) [/source/TicketingApp.csproj]"
+
