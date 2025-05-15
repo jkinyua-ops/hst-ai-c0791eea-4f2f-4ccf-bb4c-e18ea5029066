@@ -2,3 +2,5 @@
 
 "add a dark theme toggler"
 
+"The type or namespace name 'WebAssembly' does not exist in the namespace 'Microsoft.AspNetCore.Components' (are you missing an assembly reference?) [/source/TicketingApp.csproj] 5.085 /source/src/Shared/MainLayout.razor(2,9): error CS0246: The type or namespace name 'ThemeService' could not be found (are you missing a using directive or an assembly reference?) [/source/TicketingApp.csproj]"
+
